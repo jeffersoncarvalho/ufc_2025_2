@@ -11,3 +11,9 @@ Imprima o preço da Banana usando a chave.
 Depois, imprima o mesmo preço, usando o series.iloc[pos] 
 
 """
+
+import pandas as pd
+
+preco_frutas = pd.Series([2.5, 5.6, 6.3], index = ["Maça","Banana","Abacate"])
+print(preco_frutas["Banana"])
+print(preco_frutas.iloc[1])
