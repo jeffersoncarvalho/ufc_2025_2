@@ -11,3 +11,9 @@ Diana	22	    Belo Horizonte
 - Exibir as colunas "Nome" e "Cidade"
 
 """
+import pandas as pd
+
+pessoas_df = pd.read_csv("./arquivos/pessoas.csv")
+print(type(pessoas_df[["Nome"]]))
+print(type(pessoas_df[["Nome","Cidade"]]))
+#print(pessoas_df)
