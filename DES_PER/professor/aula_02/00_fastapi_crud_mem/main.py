@@ -1,5 +1,6 @@
 # pip install fastapi uvicorn pandas
 # swagger http://127.0.0.1:8000/docs
+# uvicorn main:app --reload
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pandas as pd
