@@ -10,6 +10,7 @@ import pandas as pd
 #inciar o aplicativo (API)
 app = FastAPI()
 
+#contador_id e alunos_df são variáveis GLOBAIS!
 contador_id = 1
 alunos_df = pd.DataFrame(columns = ["id","nome","curso","IRA"])
 
@@ -22,12 +23,17 @@ class Aluno(BaseModel):
 #serviço de criação de um Aluno
 @app.post("/alunos")
 def criar_aluno(aluno: Aluno):
+    
+    #dizendo ao Python que as variáveis que serão modificadas são GLOBAIS
+    global alunos_df, contador_id
+    
     novo_aluno = {
         "id": contador_id,
         "nome": aluno.nome,
         "curso": aluno.curso,
         "IRA": aluno.IRA
     }
+    
     #forma com o DataFrame._append
     alunos_df = alunos_df._append(novo_aluno, ignore_index = True)
     #forma com o concat
