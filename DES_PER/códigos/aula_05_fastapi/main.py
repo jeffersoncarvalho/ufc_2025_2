@@ -1,4 +1,6 @@
 # pip install fastapi uvicorn pandas
+#para executar:
+#uvicorn main:app --reload
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pandas as pd
