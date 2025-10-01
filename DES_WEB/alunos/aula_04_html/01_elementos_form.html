@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        div {
+            padding-top: 5px;    
+        }
+    </style>
+</head>
+<body>
+    <h1>Elementos do Formulário</h1>
+    <form action="https://httpbin.org/post" method="post">
+        <div>
+            <label for="nome_completo">Nome: </label>
+            <input id="nome_completo" type="text" name="nome_completo" required/>
+        </div>
+        <div>
+            <label for="senha">Senha: </label>
+            <input id="senha" type="password" name="senha" minlength="6" maxlength="10"/>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Escolha o seu Super-Herói</legend>
+
+                <label for="batman">Batman: </label>
+                <input id="batman" type="checkbox" name="batman"/>
+                
+                <label for="superman">Superman: </label>
+                <input id="superman" type="checkbox" name="superman"/>
+                
+                <label for="wonder_woman">Mulher-Maravilha: </label>
+                <input id="wonder_woman" type="checkbox" name="wonder_woman"/>
+            </fieldset> 
+        </div>
+        <div>
+            <fieldset>
+                <legend>Escolha a sua Universidade</legend>
+                
+                <label for="ufc">UFC</label>
+                <input id="ufc" type="radio" name="universidade" value="ufc" />
+
+                <label for="uece">UECE</label>
+                <input id="uece" type="radio" name="universidade" value="uece" />
+
+                <label for="ifce">IFCE</label>
+                <input id="ifce" type="radio" name="universidade" value="ifce" />
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Escolha a sua faixa etária</legend>
+                
+                <label for="jovem">Jovem</label>
+                <input id="jovem" type="radio" name="faixa_etaria" value="jovem" />
+
+                <label for="adulto">Adulto</label>
+                <input id="adulto" type="radio" name="faixa_etaria" value="adulto" />
+
+                <label for="idoso">Idoso</label>
+                <input id="idoso" type="radio" name="faixa_etaria" value="idoso" />
+            </fieldset>
+        </div>
+        <div>
+            <label for="idade">Idade: </label>
+            <input id="idade" type="number" name="idade" min="18" max="200" step="10"/>
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input id="email" type="email" name="email"/>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Professor Favorito:</legend>
+                <select name="professor_favorito">
+                    <option>Wladimir Tavares</option>
+                    <option>João Marcelo</option>
+                    <option>Jefferson de Carvalho</option>
+                    <option>João Vilnei</option>
+                </select>
+            </fieldset>
+        </div>
+        <div>
+            <label for="textao">Escreva o seu Textão:</label> <br />
+            <textarea rows="5" cols="50" name="textao" id="textao">
+                Escreva aqui o seu textão!
+            </textarea>
+        </div>
+        <div>
+            <label for="cor">Selecione a Cor: </label>
+            <input id="cor" type="color" name="cor"/>
+        </div>
+        <div>
+            <label for="data">Data de Nascimento: </label>
+            <input id="data" type="date" name="data"/>
+        </div>
+        <div>
+            <input id="id_produto" type="hidden" name="id_produto" value="1234"/>
+        </div>
+        <div>
+            <input type="submit" value="Enviar" />
+        </div>
+    </form>
+</body>
+</html>
