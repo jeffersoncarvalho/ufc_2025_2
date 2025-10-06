@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1>Meu Primeiro Formulário</h1>
+    <form>
+      <input
+        type="text"
+        name="primeiro_nome"
+        value="Jefferson"
+        required
+        size="40"
+      />
+      <input type="text" name="sobrenome" minlength="6" />
+      <input type="password" name="senha" minlength="6" placeholder="digite sua senha"/>
+      <input type="checkbox" name="matematica" />
+      <input type="radio" name="meu_radio" />
+      <input type="submit" name="enviar" />
+      <input type="file" name="file" />
+      idade<input type="number" name="idade" step="10" />
+      <input type="email" name="email" placeholder="meuemail@gmail.com" />
+      <input type="date" name="data" />
+      <input type="hidden" name="escondido" value="valor escondido" />
+    </form>
+
+    <hr />
+
+    <form>
+      <label>
+        <input type="radio" name="nacionalidade" value="brasileira" />
+        Brasileira
+      </label>
+      <label>
+        <input type="radio" name="nacionalidade" value="italiana" /> Italiana
+      </label>
+      <label>
+        <input type="radio" name="nacionalidade" value="portuguesa" />
+        Portuguesa
+      </label>
+    </form>
+    <hr />
+    <select name="favoritecharacter">
+      <option>Jerry</option>
+      <option>George</option>
+      <option selected>Kramer</option>
+      <option>Elaine</option>
+    </select>
+    <hr />
+    <form>
+      <textarea name="comentario" cols="30" rows="10">Texto padrão</textarea>
+    </form>
+  </body>
+</html>

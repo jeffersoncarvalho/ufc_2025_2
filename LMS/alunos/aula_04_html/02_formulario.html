@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+    </head>
+    <body>
+        <h1>Teste de Formulário</h1>
+        <form action="https://httpbin.org/post" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label>Nome: </label>
+                    <input type="text" name="nome"/>
+                </div>
+                <div>
+                    <label>E-mail: </label>
+                    <input type="email" name="email"/>
+                </div>
+                <div>
+                    <label>Idade: </label>
+                    <input type="number" name="idade" min="18" max="200"/>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferências</legend>
+                <div>
+                    <label>Cor Favorita:</label>
+                    <input type="color" name="cor" />
+                </div>
+                <div>
+                    <label>Animal Favorito:</label>
+                    <select name="animal">
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Universidade</legend>
+                <div>
+                    <label>UFC</label>
+                    <input type="radio" name="universidade" value="UFC" />
+                </div>
+                <div>
+                    <label>UECE</label>
+                    <input type="radio" name="universidade" value="UECE" />
+                </div
+                <div>
+                    <label>IFCE</label>
+                    <input type="radio" name="universidade" value="IFCE" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Áreas de Estudo</legend>
+                <div>
+                    <label>Matemática</label>
+                    <input type="checkbox" name="matematica" />
+                </div>
+                <div>
+                    <label>História</label>
+                    <input type="checkbox" name="historia" />
+                </div>
+                <div>
+                    <label>Ciências Biológicas</label>
+                    <input type="checkbox" name="biologia" />
+                </div>
+            </fieldset>
+            <div>
+                <input type="submit" value="ENVIAR" />
+            </div>
+        </form>        
+    </body>
+</html>
