@@ -27,14 +27,22 @@ def atualizar_aluno(id, aluno):
         json = {"nome": aluno.get("nome"), "curso": aluno.get("curso"), "IRA": aluno.get("IRA")}
     )
     print(resp.json())
+
+def apagar_aluno(id):
+    resp = httpx.delete(f"{BASE_URL}/alunos/{id}")
+    return resp.json()
+
 #execuçao
 #criar_aluno()
 #criar_aluno()
 #criar_aluno()
 #listar_alunos()
-print(obter_aluno(2))
+#print(obter_aluno(2))
 #print(criar_aluno({"nome":"Sicrano", "curso": "Curso Teste", "IRA": 10}))
 #listar_alunos()
-
 #atualizar_aluno(2, {"nome":"Sicrano", "curso": "Curso Teste", "IRA": 10})
 #print(r.get)
+#listar_alunos
+apagar_aluno(2)
+print("----------")
+listar_alunos()

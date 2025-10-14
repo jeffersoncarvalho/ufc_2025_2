@@ -60,6 +60,7 @@ def listar_alunos():
 #obter aluno via id
 @app.get("/alunos/{id}")
 def obter_aluno(id: int):
+    #não há necessidade de alunos_df ser "global" pois não é feita nenhuma modificação na variável.
     #global alunos_df
     filtro = alunos_df["id"] == id
     aluno = alunos_df[filtro]
@@ -80,4 +81,15 @@ def atualizar_aluno(id: int, aluno: Aluno):
         #o bug estava aqui
         "aluno": alunos_df.loc[aluno_antigo_idx].to_dict(orient="records")[0]
     }
+
+#apagar um objeto (registro) da base de dados pelo id
+@app.delete("/alunos/{id}")
+def apagar_aluno(id: int):
+    #como eu vou modificar alunos_df, devo declarar como "global"
+    global alunos_df
+    aluno_apagar_idx = alunos_df.index[ alunos_df["id"] == id ]
+    if aluno_apagar_idx.empty:
+        raise HTTPException(status_code=404, detail=f"Aluno id:{id}, não encontrado")
+    alunos_df = alunos_df.drop(aluno_apagar_idx).reset_index(drop = True)
+    return { "mensagem":  f"Aluno com {id} apagado com sucesso!"}
 
