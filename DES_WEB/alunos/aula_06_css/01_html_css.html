@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<style>
+    a[target = "_blank"] {
+        background-color: yellow;
+    }
+    img[title ~= "professor"] {
+        border: solid 5px red;
+    }
+
+    img[class |= "top"] {
+        border: solid 5px yellow;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Seletor de Atributo</h1>
+    <a href="http://www.ufc.br">Link UFC</a> <br />
+    <a href="http://www.uece.br" target="_blank">Link UECE</a> <br />
+    <a href="http://www.ifce.br" target="_self">Link IFCE</a> <br />
+
+    <span target="teste">TESTE</span>
+
+    <hr />
+
+    <img title="professor" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" width="100px" />
+    <img title="ufc professor" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" width="100px" />
+    <img title="professora" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" width="100px"> 
+
+    <hr />
+
+    <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" width="100px" />
+    <img src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" width="100px" />
+    <img src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" width="100px"> 
+
+</body>
+</html>
