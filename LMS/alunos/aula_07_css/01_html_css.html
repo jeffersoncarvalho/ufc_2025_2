@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a[target = "_blank"] {
+        background-color: yellow;
+    } 
+
+    img[title ~= "professor"]{
+        border: solid 5px red;
+    }
+
+    img[title |= "ufc"] {
+        background-color: blue;
+    }
+
+    img[title ^= "best"] {
+        background-color: pink;
+    }
+
+    img[title $= "teacher"] {
+        background-color: yellow;
+        border: solid 5px salmon;
+    }
+
+    img[title *= "coringa"] {
+        background-color: green;
+    }
+
+</style>
+</head>
+<body>
+    <h1 target>Seletor de Atributo</h1>
+
+    <a target="_blank" href="www.ufc.br">UFC</a>
+    <a target="_self" href="www.uece.br">UECE</a>
+    <a href="www.ifce.br">IFCE</a>
+
+    <hr />
+
+    <img title="asdgh-dgadfsgh-corInga-msdss-dahjdgs" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" />
+    <img title="" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" />
+    <img title="" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" />
+
+
+    <hr />
+
+    <img title="asdsdasdasdsmdasteacher" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" />
+    <img title="" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" />
+    <img title="" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" />
+
+
+    <hr />
+
+    <img title="the besty of the besta" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" />
+    <img title="bestsdjhsajshdsjdhaskj" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" />
+    <img title="" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" />
+
+
+    <hr />
+
+    <img title="campus-ufc-de quixada" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" />
+    <img title="campus-ufc" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" />
+    <img title="ufc-campus" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" />
+
+
+    <hr />
+
+    <img title="professor de redes" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" />
+    <img title="professor-de-ec" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" />
+    <img title="diretora professora" width="80px" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" />
+
+</body>
+</html>

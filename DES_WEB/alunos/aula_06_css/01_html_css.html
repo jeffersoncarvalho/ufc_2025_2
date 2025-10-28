@@ -2,9 +2,19 @@
 <html lang="pt-br">
 <head>
 <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
     a[target = "_blank"] {
         background-color: yellow;
     }
+
+    img {
+        margin: 5px;
+        padding: 5px;
+    }
+
     img[title ~= "professor"] {
         border: solid 5px red;
     }
@@ -19,6 +29,10 @@
 
     img[class $= "ufc"] {
         border: solid 5px pink;
+    }
+
+    img[class *= "teac"] {
+        border: solid 5px black;
     }
 
 </style>
@@ -54,6 +68,11 @@
     <img class="ufc-teste" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" width="100px" />
     <img class="teste-ufc" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" width="100px" />
     <img class="testeufc" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" width="100px"> 
+     <hr />
+
+    <img class="teacher" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Alisson-Barbosa-de-Souza1-225x300.png" width="100px" />
+    <img class="best-teac-her" src="https://www.quixada.ufc.br/wp-content/uploads/2016/02/Andr%C3%A9_Ribeiro_Braga1-225x300.png" width="100px" />
+    <img class="super tea" src="https://www.quixada.ufc.br/wp-content/uploads/2015/05/Andreia-225x300.png" width="100px"> 
 
 
 </body>

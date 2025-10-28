@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<style>
+    /*
+    .fonte {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .cor-fundo {
+        background-color: beige;
+    }*/
+
+    #fonte, .cor-fundo {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: azure;
+    }
+
+    .cor-fundo {
+        font-style: italic;
+    }
+
+    h1, h2, h3, span.titulo { 
+        color:red; 
+    }
+    
+    .elemento1 .elemento2{ 
+        background-color: aquamarine; 
+    }
+
+     ul#ad > [class="important"] > strong { 
+        text-decoration: underline; 
+        color: orange; 
+    } 
+</style>
+</head>
+<body>
+    <h1>Agrupamento de Seletores</h1>
+    <p id="fonte">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore repudiandae libero corporis iusto, nulla ad nemo vitae assumenda tempore maiores sequi voluptates sunt dolore laudantium molestias temporibus officiis minima veniam!
+    </p>
+
+    <p class="cor-fundo">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore repudiandae libero corporis iusto, nulla ad nemo vitae assumenda tempore maiores sequi voluptates sunt dolore laudantium molestias temporibus officiis minima veniam!
+    </p>
+
+    <span class="titulo">TEXTO</span> <div class="titulo">TEXTO</div>TEXTO TEXTO
+    <hr />
+    <div class="elemento1">
+        <div class="elemento2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, necessitatibus. Nulla suscipit, modi eaque recusandae cupiditate praesentium neque enim voluptatem iure asperiores iusto ut, voluptatum laudantium quos nam maiores quasi!
+        </div>
+    </div>
+    <hr />
+
+    <div >
+    <ul id="ad">
+        <li>Item 1</li>
+        <li class="important"><strong>Item</strong> 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    </div>
+
+</body>
+</html>
