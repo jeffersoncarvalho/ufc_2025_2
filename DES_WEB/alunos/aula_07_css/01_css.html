@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <style>
+      span {
+        color: red;
+        font-weight: bolder;
+      }
+
+      p ~ span {
+        color: green;
+      }
+
+      #minha-div {
+        background-color: yellow;
+        width: 150px;
+        height: 150px;
+      }
+
+      #minha-div:hover {
+        background-color: red;
+      }
+
+      #nome:disabled {
+        background-color: blueviolet;
+      }
+      #nome:focus {
+        background-color: red;
+      }
+
+      li:nth-child(4n) {
+        background-color: aquamarine;
+      }
+      p::first-letter {
+        font-size: 200%;
+      }
+      p::first-line {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Você 
+      pode utilizar apenas um pseudo elemento em um seletor.
+    </p>
+    <p>
+      Ele <br />
+      deve aparecer depois da declaração de um elemento simples
+    </p>
+    .
+
+    <ul>
+      <li>Primeiro item</li>
+      <li>Segundo item</li>
+      <li>Terceiro item</li>
+      <li>Quarto item</li>
+      <li>Primeiro item</li>
+      <li>Segundo item</li>
+      <li>Terceiro item</li>
+      <li>Quarto item</li>
+      <li>Primeiro item</li>
+      <li>Segundo item</li>
+      <li>Terceiro item</li>
+      <li>Quarto item</li>
+    </ul>
+
+    <div id="minha-div"></div>
+    
+    
+    <br />
+    <input type="text" id="nome" disabled /> <br />
+
+    <span>Irmão que vem antes.</span>
+
+    <p>Irmão principal.</p>
+    <br />
+    <span>Irmão que vem depois!</span> <br />
+    <code>Irmão que vem depois!</code> <br />
+    <span>Outro irmão</span> <br />
+    <h2>Mais um irmão.</h2>
+    <span>Último irmão.</span>
+    <div>
+      <span>TESTE</span>
+    </div>
+  </body>
+</html>

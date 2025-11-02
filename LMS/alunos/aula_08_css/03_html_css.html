@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        #minha_div {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 20px 50px;
+            border: dashed 5px;
+        }
+        #minha_div:hover {
+            background-color: red;
+        }
+
+        input#nome {
+            background-color: yellow;
+        }
+        input#nome:focus {
+            background-color: blueviolet;
+        }
+
+        li:first-child {
+            background-color: beige;
+        }
+        li:nth-child(2n) {
+            background-color: green;
+        }
+        li:nth-child(5) {
+            background-color: red;
+        }
+        li:last-child {
+            background-color: black;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Classes</h1>
+    <div id="minha_div">
+        TESTE
+    </div>
+    <input type="text" id="nome" />
+    <ul>
+        <li>Item 1 </li>
+        <li>Item 2 </li>
+        <li>Item 3 </li>
+        <li>Item 4 </li>
+        <li>Item 5 </li>
+        <li>Item 6 </li>
+    </ul>
+  </body>
+</html>

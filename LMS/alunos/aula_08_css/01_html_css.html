@@ -2,7 +2,17 @@
 <html lang="pt-br">
   <head>
     <style>
-        
+        span {
+            color: blue
+        }
+
+        p ~ span {
+            color: red 
+        }
+
+        div.parent > h2#irmao-principal ~ h2.irmao{
+            background-color: beige;
+        }
     </style>
   </head>
   <body>
@@ -15,5 +25,15 @@
     <span>Outro irmão</span>
     <h2>Mais um irmão.</h2>
     <span>Último irmão.</span>
+    <div id="filho">
+        <br />
+        <span>Span dentro da DIV</span>
+    </div>
+    <div class="parent">
+        <h2>Irmão 1</h2>
+        <h2 id="irmao-principal">Irmão Principal</h2>
+        <h2 class="irmao">Irmão 2</h2>
+        <h2>Irmão 3</h2>
+    </div>
   </body>
 </html>
