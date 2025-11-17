@@ -1,0 +1,82 @@
+:root {
+    --bg: white;
+    --fg: black;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 1rem;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+#site-header {
+    background-color: purple;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#site-menu {
+   
+}
+
+#site-menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+#site-menu ul li{
+    background-color: #33b5e5;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+}
+
+#site-menu ul li:hover{
+    background-color: #0099cc;
+}
+
+#site-menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#site-content p {
+    text-align: justify;
+}
+
+#site-trivia {
+    background-color: beige;
+    border: 1px solid #0099cc;
+    padding-bottom: 1rem;
+}
+
+#site-trivia h2{
+    padding-left: 1rem;
+}
+
+#site-footer {
+    background-color: #0099cc;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width:680px){
+    #container {
+        flex-direction: row;
+    }
+}

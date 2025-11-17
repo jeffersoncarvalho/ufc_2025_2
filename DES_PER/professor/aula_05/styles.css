@@ -1,0 +1,88 @@
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+main.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#site-header {
+  background-color: aquamarine;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: x-large;
+}
+
+#site-menu ul {
+  list-style: none;
+  padding: 0;
+  min-width: 12rem;
+}
+
+#site-menu ul li {
+  background-color: #33b5e5;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#site-menu ul li:hover {
+  background-color: #0099cc;
+}
+
+#site-menu ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+#site-content {
+  text-align: justify;
+}
+
+#site-aside {
+  background-color: antiquewhite;
+  border: 1px solid yellowgreen;
+  margin-top: 1rem;
+  padding-right: 2rem;
+  min-width: 20rem;
+}
+
+#site-aside h2 {
+  padding-left: 1rem;
+}
+
+#site-aside ul {
+  padding-left: 2rem;
+}
+
+#site-footer {
+  background-color: #0099cc;
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+}
+
+@media screen and (max-width: 800px) {
+  main.container {
+    flex-direction: column;
+  }
+}

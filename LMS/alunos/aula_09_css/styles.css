@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#site-header {
+    padding: 0.1rem;
+    text-align: center;
+    font-size: larger;
+    background-color: purple;
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#site-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#site-menu ul li {
+    background-color: #33b5e8;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+}
+
+#site-menu ul li:hover {
+    background-color: #0099cc;
+}
+
+#site-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#site-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#site-content p{
+    text-align: justify;
+}
+
+#site-trivia {
+    border: 1px solid #0099cc;
+    background-color: beige;
+    margin: 1rem;
+    padding-left: 1rem;
+}
+
+#site-footer {
+    background-color: #0099cc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    #container {
+        flex-direction: column;
+    }   
+}
