@@ -1,0 +1,30 @@
+.example {
+    background-color: pink;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.teste {
+    border: 5px solid blue;
+}
+
+.me {
+    background-color: red;
+    
+}
+
+.not-highlighted { 
+  color: red; 
+  background-color: #c0c0c0; 
+  font-size: 42pt; 
+  width: 450pt 
+}
+
+.highlighted { 
+  color: red; 
+  background-color: yellow; 
+  font-size: 42pt; 
+  width: 450pt 
+}
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .active {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <p class="example">Parágrafo 1</p>
+        <p class="example">Parágrafo 2</p>
+        <div class="active">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, numquam. Repellendus eligendi laborum, facilis modi amet distinctio sint perspiciatis atque sequi omnis adipisci totam ab facere laboriosam? Blanditiis, incidunt eaque?
+        </div>
+        <form>
+            <input type="checkbox" id="es" name="disciplina" value="es"/>
+            <label for="es">Engenharia de Software</label><br />
+            <input type="checkbox" id="md" name="disciplina" value="md"/>
+            <label for="md">Matemática Discreta</label><br />
+            <input type="checkbox" id="cg" name="disciplina" value="cg"/>
+            <label for="cg">Computação Gráfica</label><br />
+        </form>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector("#wrapper")
+        console.log(wrapper.getElementsByTagName("p"))
+        wrapper.getElementsByTagName("p")[0].innerHTML = "TESTE"
+        wrapper.getElementsByTagName("p")[1].style.backgroundColor = "red"
+        console.log(wrapper.getElementsByClassName("active")[0].style.display = "block")
+        console.log(document.getElementsByName("disciplina")[0].checked = true)
+        console.log(document.querySelector("p.example"))
+        console.log(document.querySelectorAll("p.example"))
+    </script>
+</body>
+</html>
