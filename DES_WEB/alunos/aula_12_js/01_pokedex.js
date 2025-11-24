@@ -13,11 +13,14 @@ const pokemons = [
 
 const url_imagem = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/"
 
-let id_inicial = pokemons[0].id
-let nome_inicial = pokemons[0].nome
+let id_num_inicial = 0
 
 
 function iniciar() {
+
+    let id_inicial = pokemons[id_num_inicial].id
+    let nome_inicial = pokemons[id_num_inicial].nome
+
     let pokemon_nome_tag = document.getElementById("pokemon_nome")
     pokemon_nome_tag.innerHTML = nome_inicial
 
@@ -26,11 +29,32 @@ function iniciar() {
 }
 
 function btn_voltar() {
-    alert("VOLTAR")
+    //alert("VOLTAR")
+    if (id_num_inicial - 1 < 0) {
+        id_num_inicial = pokemons.length - 1
+    }
+    else {
+        id_num_inicial -= 1
+    }
+    iniciar()
 }
 
 function btn_avancar() {
-    alert("AVANÇAR")
+    //alert("AVANÇAR")
+    if (id_num_inicial + 1 >= pokemons.length) {
+        id_num_inicial = 0
+    }
+    else {
+        id_num_inicial += 1
+    }
+    iniciar()
+}
+
+function teste() {
+    let str = "001"
+    let numero = parseInt(str)
+    console.log(numero)
 }
 
 iniciar()
+//teste()
