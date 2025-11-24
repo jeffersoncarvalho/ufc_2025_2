@@ -1,3 +1,64 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#site-header {
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 1rem;
+}
+
+#site-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.site-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-card img {
+    background-color: whitesmoke;
+    border-radius: 6px;
+}
+
+.site-card .site-card-buttons {
+    
+    display: flex;
+    width: 100%;
+   
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.site-card .site-card-buttons button {
+    width: 6rem;
+    background-color: purple;
+    color: white;
+    padding: 0.3rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid purple;
+}
+
+#site-footer {
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 1rem;
+    font-style: italic;
+}
+
+.bumpable {
+    position: relative;
+    transition: transform 0.3s ease-out, opacity 0.2s ease-in;
+    transition-delay: 0.1s;
+}
+
+.bumpable:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}gti
