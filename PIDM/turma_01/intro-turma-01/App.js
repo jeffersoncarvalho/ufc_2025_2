@@ -5,12 +5,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 //import OlaMundo from './components/aula_01/OlaMundo';
 //import OlaMundoComEstilo from './components/aula_02/OlaMundoComEstilo';
 //import OlaMundoSafeArea from "./components/aula_03/OlaMundoSafeArea";
-import CalculadoraIMC from "./components/aula_04/CalculadoraIMC";
+//import CalculadoraIMC from "./components/aula_04/CalculadoraIMC";
+import PokedexLabel from "./components/aula_05/PokedexLabel";
 
 export default function App() {
   return (
     <SafeAreaView style={{flex:1}}>
-      <CalculadoraIMC />
+      <PokedexLabel nome="Charmander"/>
     </SafeAreaView>
   )
 }
