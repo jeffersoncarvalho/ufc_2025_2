@@ -6,14 +6,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 //import OlaMundoComEstilo from './components/aula_02/OlaMundoComEstilo';
 //import OlaMundoSafeArea from "./components/aula_03/OlaMundoSafeArea";
 //import CalculadoraIMC from "./components/aula_04/CalculadoraIMC";
-import PokedexLabel from "./components/aula_05/PokedexLabel";
-import PokedexButton from "./components/aula_05/PokedexButton";
+//import PokedexLabel from "./components/aula_05/PokedexLabel";
+//import PokedexButton from "./components/aula_05/PokedexButton";
+import PokedexCard from "./components/aula_05/PokedexCard";
 
 export default function App() {
   return (
     <SafeAreaView style={{flex:1}}>
-      <PokedexLabel nome="Charmander"/>
-      <PokedexButton titulo="Capturar" acao={()=>alert("TESTE")}/>
+      <PokedexCard id={1} nome="Pikachu" />
     </SafeAreaView>
   )
 }
