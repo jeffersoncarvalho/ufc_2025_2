@@ -1,9 +1,12 @@
 import { Pressable, Text, StyleSheet } from "react-native"
 
-const PokedexButton = () => {
+const PokedexButton = ({titulo, acao}) => {
     return (
-        <Pressable style={estilos.botao}>
-            <Text style={estilos.texto}>Capturar</Text>
+        <Pressable 
+            style={({pressed}) => pressed? [estilos.botao, estilos.pressionado] : estilos.botao}
+            onPress={acao}
+        >
+            <Text style={estilos.texto}>{titulo}</Text>
         </Pressable>
     )
 }
@@ -18,7 +21,15 @@ const estilos = StyleSheet.create({
         backgroundColor: "beige",
         borderRadius: 8,
         borderWidth: 2,
-        borderColor: "orange"
+        borderColor: "orange",
+
+        padding: 5,
+        alignItems: "center"
+
+    },
+    pressionado: {
+        
+        backgroundColor: "red"
     }
 })
 
