@@ -22,11 +22,20 @@ const PokedexCard = ({id, nome}) => {
 
 const estilos = StyleSheet.create({
     card: {
+        backgroundColor: "whitesmoke",
+        borderWidth: 2,
+        borderColor: "#c0c0c0",
+        borderRadius: 8,
+        padding: 10,
 
+        alignItems: "center",
+        alignSelf: "flex-start"
+        
     },
     imagem: {
         width: 100,
-        height: 100
+        height: 100,
+        marginBottom: 5
     }
 })
 
