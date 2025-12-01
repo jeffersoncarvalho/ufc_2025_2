@@ -1,6 +1,8 @@
 const PokemonRepository = require("../repositories/PokemonRepository")
+const PokemonDTO = require("../dtos/PokemonDTO")
 
 //lógica de negócio
+//mapeamento de model -> dto
 class PokemonService {
 
     constructor() {
@@ -10,7 +12,7 @@ class PokemonService {
     async listarTodos() {
 
         const pokemons = await this.pokemonRepository.findAll()
-        return pokemons
+        return pokemons.map((pokemon) => new PokemonDTO(pokemon))
 
     }
 
