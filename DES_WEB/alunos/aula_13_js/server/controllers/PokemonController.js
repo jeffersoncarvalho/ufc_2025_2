@@ -5,7 +5,7 @@ const router = express.Router()
 
 //pegar todos os pokemons
 router.get(
-    "/",
+    "/listarTodos",
     async (request, response) => {
         try {
             const pokemons = await pokemonService.listarTodos() 

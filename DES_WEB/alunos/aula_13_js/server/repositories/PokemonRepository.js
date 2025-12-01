@@ -35,4 +35,4 @@ class PokemonRepository {
 
 }
 
-module.exports = new pokemonRepository()
+module.exports = new PokemonRepository()
