@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #card-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .card {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                background-color: whitesmoke;
+                padding: 1rem;
+            }
+            .pokemon-name {
+                font-weight: bold;
+                text-align: center;
+            }
+            .pokemon-img {
+                width: 5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pokemons</h1>
+        <div id="card-container">
+            
+        </div>
+        <script>
+            async function carregarPokemons() {
+                const response = await fetch("http://localhost:3000/api/pokemons/")
+                const pokemons = await response.json()
+                const cardContainer = document.getElementById("card-container")
+                pokemons.forEach(pokemon => {
+                    const divCard = document.createElement("div")
+                    divCard.classList.add("card")
+                    let cardHTML = ""
+                    cardHTML += `<span class='pokemon-name'>${pokemon.nome}</span>`
+                    cardHTML += `<img class='pokemon-img' src='${pokemon.imagem}' />`
+                    divCard.innerHTML = cardHTML
+                    cardContainer.appendChild(divCard)
+                });
+            }
+
+            carregarPokemons()
+        </script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 const pokemonRepository = require("../repositories/PokemonRepository")
-const PokemonDT0 = require("../dtos/PokemonDTO")
+const PokemonDTO = require("../dtos/PokemonDTO")
 
 //lógica de negócio e mapeamento
 class PokemonService {

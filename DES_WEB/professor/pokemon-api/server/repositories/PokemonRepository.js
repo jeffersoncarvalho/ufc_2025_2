@@ -1,4 +1,4 @@
-const PokemonModel = require("../models/PokemonModel");
+const PokemonModel = require("../models/PokemonModel")
 
 //dados em memória
 const pokemons = [
