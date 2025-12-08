@@ -29,7 +29,7 @@ const PokedexMain = () => {
 
   async function carregarPokemons() {
     try {
-      const response = await fetch("http://172.25.250.154:3000/api/pokemon")
+      const response = await fetch("http://192.168.192.1:3000/api/pokemon")
       const data = await response.json()
       setPokemons(data)
     }catch(error) {

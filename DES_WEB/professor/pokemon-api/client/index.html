@@ -10,6 +10,11 @@
                 flex-wrap: wrap;
                 gap: 1rem;
             }
+            #card-capturados {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
             .card {
                 display: flex;
                 flex-direction: column;
@@ -31,23 +36,92 @@
         <div id="card-container">
             
         </div>
+        <hr />
+        <h2>Capturados</h2>
+        <div id="card-capturados">
+
+        </div>
+        <hr />
+        <button onclick="carregarPokemonsCapturados()">Carregar Capturados</button>
+        <button onclick="limparSessao('pokemons')">Limpar Sessão</button>
+
         <script>
             async function carregarPokemons() {
                 const response = await fetch("http://localhost:3000/api/pokemons/")
                 const pokemons = await response.json()
                 const cardContainer = document.getElementById("card-container")
                 pokemons.forEach(pokemon => {
+                    //console.log(pokemon)
                     const divCard = document.createElement("div")
                     divCard.classList.add("card")
                     let cardHTML = ""
                     cardHTML += `<span class='pokemon-name'>${pokemon.nome}</span>`
                     cardHTML += `<img class='pokemon-img' src='${pokemon.imagem}' />`
+                    cardHTML += `<button onclick='capturarPokemon(${JSON.stringify(pokemon)})'>Capturar</button>`
                     divCard.innerHTML = cardHTML
                     cardContainer.appendChild(divCard)
                 });
             }
 
+            function capturarPokemon(pokemon) {
+                //console.log(pokemon)
+                let pokemons = sessionStorage.getItem("pokemons")
+                
+                if(pokemons) {
+                    pokemons = JSON.parse(pokemons)
+                    //testar se existe 
+                    const existe = pokemons.some(
+                        (x) => x.id == pokemon.id
+                    )
+                    if(!existe) {
+                         pokemons.push(pokemon)
+                        sessionStorage.setItem("pokemons",JSON.stringify(pokemons))
+                        console.log(`Pokemon ${pokemon.nome} adcionado em sessão 'pokemons'.`)
+                    }else {
+                        console.log(`Pokemon ${pokemon.nome} já capturado!`)
+                    }
+                   
+                }else {
+                    pokemons = []
+                    pokemons.push(pokemon)
+                    sessionStorage.setItem("pokemons",JSON.stringify(pokemons))
+                    console.log(`Sessão vazia para objeto 'pokemons'. Criando nova lista e adicionando Pokemon ${pokemon.nome}.`)
+                }
+                carregarPokemonsCapturados()
+            }
+
+            function carregarPokemonsCapturados() {
+                let pokemons = sessionStorage.getItem("pokemons")
+
+                if(pokemons) {
+                    pokemons = JSON.parse(pokemons)
+                    const cardContainer = document.getElementById("card-capturados")
+                    //cardContainer.innerHTML = ""
+                    cardContainer.replaceChildren()
+                    pokemons.forEach(pokemon => {
+                        //console.log(pokemon)
+                        const divCard = document.createElement("div")
+                        divCard.classList.add("card")
+                        let cardHTML = ""
+                        cardHTML += `<span class='pokemon-name'>${pokemon.nome}</span>`
+                        cardHTML += `<img class='pokemon-img' src='${pokemon.imagem}' />`
+                        divCard.innerHTML = cardHTML
+                        cardContainer.appendChild(divCard)
+                    });
+                }else {
+                    console.log("Sessão vazia para objeto 'pokemons'")
+                }
+
+            }
+
+            function limparSessao(sessao) {
+                sessionStorage.removeItem(sessao)
+                console.log(`Sessão ${sessao} limpa!`)
+            }
+
             carregarPokemons()
+
+
         </script>
     </body>
 </html>

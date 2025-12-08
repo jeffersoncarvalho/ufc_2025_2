@@ -11,6 +11,6 @@ app.use("/api/pokemons", pokemonRouter)
 app.listen(
     PORT,
     () => {
-        console.log(`API execudando em http://localhost:${PORT}`)
+        console.log(`API executando em http://localhost:${PORT}`)
     }
 )

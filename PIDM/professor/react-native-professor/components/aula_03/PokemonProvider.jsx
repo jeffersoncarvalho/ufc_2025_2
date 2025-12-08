@@ -2,8 +2,8 @@ import { useState, createContext } from "react"
 
 const PokemonContext = createContext(null)
 
-const PokemonProvider = () => {
-    const [capturados, setCapturados] = useState([{nome:"pikachu"}])
+const PokemonProvider = ({children}) => {
+    const [capturados, setCapturados] = useState([])
 
     const capturarPokemon = (pokemon) => {
         setCapturados( prevCapturados => [ ...prevCapturados, pokemon])

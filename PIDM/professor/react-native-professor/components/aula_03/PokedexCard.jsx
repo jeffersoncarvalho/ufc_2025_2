@@ -1,10 +1,14 @@
 import { View, Image, Text, StyleSheet } from "react-native"
+import { useContext } from "react"
+
 import PokedexButtonPressable from "./PokedexButtonPressable"
 import PokedexLabel from "./PokedexLabel"
+import { PokemonContext } from "./PokemonProvider"
 
 const url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
 
 const PokedexCard = ({id, nome, imagem, habilidades}) => {
+    const {capturarPokemon} = useContext(PokemonContext)
     return (
         <View style={estilos.card}> 
             <PokedexLabel texto={nome} />
@@ -20,7 +24,10 @@ const PokedexCard = ({id, nome, imagem, habilidades}) => {
             </View>
             <PokedexButtonPressable 
                 titulo="Capturar" 
-                acao={() => alert("CAPTURADO!")}/>
+                acao={() =>{ 
+                        alert(`Pokemon ${nome} capturado!`)
+                        return capturarPokemon({id,nome,imagem,habilidades})} 
+                    }/>
         </View>
     )
 }
