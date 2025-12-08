@@ -15,6 +15,36 @@ const pokemons = [
         id: 3,
         nome: "Venasaur",
         habilidades: ["planta", "veneno"]
+    }),
+    new PokemonModel({
+        id: 4,
+        nome: "Charmander",
+        habilidades: ["planta", "veneno"]
+    }),
+    new PokemonModel({
+        id: 5,
+        nome: "Charmaleon",
+        habilidades: ["planta", "veneno"]
+    }),
+    new PokemonModel({
+        id: 6,
+        nome: "Charizard",
+        habilidades: ["planta", "veneno"]
+    }),
+    new PokemonModel({
+        id: 7,
+        nome: "Squirtle",
+        habilidades: ["planta", "veneno"]
+    }),
+    new PokemonModel({
+        id: 8,
+        nome: "Wartotle",
+        habilidades: ["planta", "veneno"]
+    }),
+    new PokemonModel({
+        id: 9,
+        nome: "Blastoise",
+        habilidades: ["planta", "veneno"]
     })
 ]
 
