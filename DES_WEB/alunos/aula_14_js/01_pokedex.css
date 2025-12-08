@@ -13,9 +13,10 @@ body {
 
 #site-main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     padding: 1rem;
+    gap: 3rem;
 }
 
 #pokemon-imagem {
