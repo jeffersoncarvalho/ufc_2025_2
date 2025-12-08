@@ -10,7 +10,7 @@ const PokedexLabel = ({nome}) => {
 
 const estilos = StyleSheet.create({
     texto: {
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: "bold",
         color: "black"
     }

@@ -37,6 +37,7 @@ function capturarPokemon(pokemon){
             pokemons.push(pokemon)
             sessionStorage.setItem("pokemons",JSON.stringify(pokemons))
             console.log(`Pokemon ${pokemon.nome} adicionado!`)
+            carregarPokemonsCapturados()
         }else {
             alert(`Pokemon ${pokemon.nome} já capturado!`)
         }
@@ -49,8 +50,40 @@ function capturarPokemon(pokemon){
         sessionStorage.setItem("pokemons", JSON.stringify(pokemons))
         console.log("Sessão 'pokemons' vazia. Criando uma nova!")
         console.log(`Adicionando ${pokemon.nome} à nova sessão.`)
+        carregarPokemonsCapturados()
     }
     
 }
 
+function carregarPokemonsCapturados() {
+    let pokemons = sessionStorage.getItem("pokemons")
+    console.log(pokemons)
+    if(pokemons) {
+        pokemons = JSON.parse(pokemons)
+        const capturadosDiv = document.getElementById("capturados-container")
+        //capturadosDiv.innerHTML = ""
+        capturadosDiv.replaceChildren()
+        pokemons.forEach(
+            (pokemon) => {
+                const pokemonCardDiv = document.createElement("div")
+                pokemonCardDiv.classList.add("site-card")
+                pokemonCardDiv.classList.add("bumpable")
+
+                let pokemonCardDivHTML = "" //HTML STRING
+                pokemonCardDivHTML += `<h2 id='pokemon_nome'>${pokemon.nome}</h2>`
+                pokemonCardDivHTML += `<img
+                                        id = 'pokemon-imagem'
+                                        src= '${pokemon.imagem}'
+                                        />`
+                
+                pokemonCardDiv.innerHTML = pokemonCardDivHTML
+                capturadosDiv.appendChild(pokemonCardDiv)
+            }
+        )
+    }else {
+        console.log("Nenhum Pokemon capturado ainda!")
+    }
+}
+
 carregarPokemons()
+carregarPokemonsCapturados()

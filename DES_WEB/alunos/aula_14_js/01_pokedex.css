@@ -72,7 +72,7 @@ body {
     opacity: 0.8;
 }
 
-#pokemon-container {
+#pokemon-container, #capturados-container {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;

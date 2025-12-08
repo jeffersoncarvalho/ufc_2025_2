@@ -2,14 +2,14 @@ import {View, Image, StyleSheet} from "react-native"
 import PokedexLabel from "./PokedexLabel"
 import PokedexButton from "./PokedexButton"
 
-const PokedexCard = ({id, nome}) => {
+const PokedexCard = ({id, nome, imagem}) => {
     return (
         <View style={estilos.card}>
             <PokedexLabel nome={nome} />
             <Image
                 style={estilos.imagem}
                 source={
-                   {uri: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png"} 
+                   {uri: imagem} 
                 }
             />
             <PokedexButton
@@ -29,7 +29,8 @@ const estilos = StyleSheet.create({
         padding: 10,
 
         alignItems: "center",
-        alignSelf: "flex-start"
+        alignSelf: "flex-start",
+        margin: 3,
         
     },
     imagem: {

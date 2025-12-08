@@ -8,12 +8,18 @@ import { SafeAreaView } from "react-native-safe-area-context";
 //import CalculadoraIMC from "./components/aula_04/CalculadoraIMC";
 //import PokedexLabel from "./components/aula_05/PokedexLabel";
 //import PokedexButton from "./components/aula_05/PokedexButton";
-import PokedexCard from "./components/aula_05/PokedexCard";
+//import PokedexCard from "./components/aula_05/PokedexCard";
+import PokedexMain from "./components/aula_05/PokedexMain";
+
+import PokemonProvedor from "./components/aula_05/PokemonContexto";
+import PokemonContexto from "./components/aula_05/PokemonContexto"
 
 export default function App() {
   return (
     <SafeAreaView style={{flex:1}}>
-      <PokedexCard id={1} nome="Pikachu" />
+      <PokemonProvedor>
+        <PokedexMain />
+      </PokemonProvedor>
     </SafeAreaView>
   )
 }
