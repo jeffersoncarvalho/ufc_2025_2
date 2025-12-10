@@ -1,15 +1,10 @@
 import { SafeAreaView } from "react-native-safe-area-context"
-//import HelloWorld from "./components/aula_01/HelloWorld";
-//import MeuIMC from "./components/aula_02/MeuIMC";
-import PokedexCard from "./components/aula_03/PokedexCard";
+import PokedexMain from "./components/aula_03/PokedexMain";
 
 export default function App() {
   return (
     <SafeAreaView>
-      <PokedexCard 
-        nome = "Jefferson"
-        imagem = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-      /> 
+      <PokedexMain />
     </SafeAreaView>
     
   );
