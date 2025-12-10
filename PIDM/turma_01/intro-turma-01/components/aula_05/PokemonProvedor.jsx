@@ -2,7 +2,7 @@ import { useState, createContext } from "react"
 
 //criando o contexto que serve para compartilhar variáveis de estado
 //e até funções
-const PokemonContexto = createContext(null)
+const PokemonContexto = createContext()
 
 //o provedor disponibiliza o contexto para outros componentes
 const PokemonProvedor = (props) => {
@@ -18,7 +18,6 @@ const PokemonProvedor = (props) => {
     return (
         <PokemonContexto.Provider value={{capturados, capturarPokemon}}>
             {props.children}
-            
         </PokemonContexto.Provider>
     )
 }

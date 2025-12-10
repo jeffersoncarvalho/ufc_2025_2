@@ -1,8 +1,27 @@
 import {View, Image, StyleSheet} from "react-native"
+import { useContext } from "react"
 import PokedexLabel from "./PokedexLabel"
 import PokedexButton from "./PokedexButton"
+import { PokemonContexto } from "./PokemonProvedor"
 
-const PokedexCard = ({id, nome, imagem}) => {
+
+const PokedexCard = ({id, nome, imagem, capturado=false}) => {
+
+    const {capturarPokemon} = useContext(PokemonContexto)
+
+    function renderizarBotao(){
+        if (!capturado)
+            return (<PokedexButton
+                titulo="Capturar"
+                acao={() => {
+                                capturarPokemon({id,nome,imagem})
+                                alert(`Pokemon ${nome} capturado!`)
+                            }
+                }
+            />)
+        return
+    }
+
     return (
         <View style={estilos.card}>
             <PokedexLabel nome={nome} />
@@ -12,10 +31,8 @@ const PokedexCard = ({id, nome, imagem}) => {
                    {uri: imagem} 
                 }
             />
-            <PokedexButton
-                titulo="Capturar"
-                acao={() => alert("CAPTURADO!")}
-            />
+            
+            {renderizarBotao()}
         </View>
     )
 }

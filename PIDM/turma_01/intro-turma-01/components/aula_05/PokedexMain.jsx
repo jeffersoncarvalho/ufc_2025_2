@@ -1,12 +1,11 @@
 import { View, StyleSheet, FlatList } from "react-native"
 import { useState, useEffect } from "react"
-
 import PokedexCard from "./PokedexCard" 
 
 const PokedexMain = () => {
     
     const [pokemons, setPokemons] = useState([])
-
+    
     useEffect(
         () => {
             //chamada à api remota!
@@ -19,7 +18,7 @@ const PokedexMain = () => {
 
     async function carregarPokemons() {
         try{
-            const response = await fetch("http://172.18.103.185:3000/api/pokemon/")
+            const response = await fetch("http://172.25.250.154:3000/api/pokemon/")
             const dados = await response.json()
             //atualizar a variável de estado!
             setPokemons(dados)

@@ -1,26 +1,28 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-//import OlaMundo from './components/aula_01/OlaMundo';
-//import OlaMundoComEstilo from './components/aula_02/OlaMundoComEstilo';
-//import OlaMundoSafeArea from "./components/aula_03/OlaMundoSafeArea";
-//import CalculadoraIMC from "./components/aula_04/CalculadoraIMC";
-//import PokedexLabel from "./components/aula_05/PokedexLabel";
-//import PokedexButton from "./components/aula_05/PokedexButton";
-//import PokedexCard from "./components/aula_05/PokedexCard";
 import PokedexMain from "./components/aula_05/PokedexMain";
+import PokedexCapturados from "./components/aula_05/PokedexCapturados";
 
-import PokemonProvedor from "./components/aula_05/PokemonContexto";
-import PokemonContexto from "./components/aula_05/PokemonContexto"
+import { PokemonProvedor } from "./components/aula_05/PokemonProvedor";
+
+const Tab = createBottomTabNavigator()
 
 export default function App() {
   return (
-    <SafeAreaView style={{flex:1}}>
+    
       <PokemonProvedor>
-        <PokedexMain />
+        <NavigationContainer>
+          <Tab.Navigator
+            initialRouteName="Pokédex"
+          >
+            <Tab.Screen name="Pokédex" component={PokedexMain}/>
+            <Tab.Screen name="Pokebola" component={PokedexCapturados}/>
+          </Tab.Navigator>
+        </NavigationContainer>
       </PokemonProvedor>
-    </SafeAreaView>
+
   )
 }
 
