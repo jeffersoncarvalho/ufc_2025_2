@@ -29,7 +29,7 @@ const PokedexMain = () => {
     )
 
     return (
-        <View>
+        <View style={estilos.container}>
             <FlatList 
                 data = {pokemons}
                 renderItem={
@@ -41,9 +41,21 @@ const PokedexMain = () => {
                         />
                     }
                 }
+                numColumns={3}
+                contentContainerStyle={estilos.lista}
             />
         </View>
     )
 }
+
+const estilos = StyleSheet.create({
+    container: {
+        
+    }
+    ,
+    lista: {
+        alignItems: "center",
+    }
+})
 
 export default PokedexMain

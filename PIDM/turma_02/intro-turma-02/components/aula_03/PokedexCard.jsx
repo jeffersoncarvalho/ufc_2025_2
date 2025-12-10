@@ -26,6 +26,7 @@ const estilos = StyleSheet.create({
         borderColor: "#c0c0c0",
 
         padding: 10,
+        margin: 5,
 
         alignSelf: "flex-start",
         alignItems: "center",
