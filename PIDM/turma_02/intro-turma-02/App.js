@@ -6,7 +6,10 @@ import PokedexCard from "./components/aula_03/PokedexCard";
 export default function App() {
   return (
     <SafeAreaView>
-      <PokedexCard /> 
+      <PokedexCard 
+        nome = "Jefferson"
+        imagem = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+      /> 
     </SafeAreaView>
     
   );

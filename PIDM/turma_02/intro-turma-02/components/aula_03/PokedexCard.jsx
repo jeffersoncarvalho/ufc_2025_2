@@ -2,26 +2,16 @@ import {View, Image, StyleSheet} from "react-native"
 import PokedexLabel from "./PokedexLabel"
 import PokedexButton from "./PokedexButton"
 
-const url = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/"
-
-const pokemons = [
-    {
-        nome: "Bulbasaur",
-        id: 1,
-        imagem: "100.png"
-    }
-]
-
-const PokedexCard = () => {
+const PokedexCard = ({id, nome, imagem}) => {
     return (
         <View style={estilos.card}>
             <Image 
                 style={estilos.imagem}
                 source={
-                    {uri: url + pokemons[0].imagem}
+                    {uri: imagem}
                 }
             />
-            <PokedexLabel label={pokemons[0].nome}/>
+            <PokedexLabel label={nome}/>
             <PokedexButton titulo= "Capturar" acao={() => alert("CAPTURADO!")} />
             
         </View>
