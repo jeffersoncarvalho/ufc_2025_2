@@ -13,8 +13,8 @@ const PerfilScreen = () => {
         <View style={estilos.container}>
             <Text style={estilos.cabecalho}>Perfil</Text>
             <View style={estilos.botoes}>
-                <View style={estilos.botao}>
-                    <Button title="Curiosidades" />
+                <View style={estilos.botao} >
+                    <Button title="Curiosidades" onPress={()=>navigation.navigate("Curiosidades")}/>
                 </View>
                 <View style={estilos.botao}>
                     <Button title="Voltar" onPress={()=>navigation.goBack()}/>
