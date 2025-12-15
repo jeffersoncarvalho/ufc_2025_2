@@ -19,6 +19,9 @@ const PerfilScreen = () => {
                 <View style={estilos.botao}>
                     <Button title="Voltar" onPress={()=>navigation.goBack()}/>
                 </View>
+                <View style={estilos.botao}>
+                    <Button title="TESTE" onPress={()=>navigation.navigate("Teste")}/>
+                </View>
             </View>
         </View>
         </SafeAreaView>

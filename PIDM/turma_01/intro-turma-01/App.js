@@ -7,6 +7,8 @@ import PerfilScreen from "./components/aula_06/PerfilScreen"
 import ProjetosScreen from "./components/aula_06/ProjetosScreen"
 import ContatosScreen from "./components/aula_06/ContatosScreen"
 
+import TesteScreen from "./components/aula_06/TesteScreen"
+
 const Stack = createStackNavigator()
 
 const App = () => {
@@ -23,7 +25,7 @@ const App = () => {
                 <Stack.Screen name="Perfil" component={PerfilScreen} />
                 <Stack.Screen name="Projetos" component={ProjetosScreen} />
                 <Stack.Screen name="Contatos" component={ContatosScreen} />
-                
+                <Stack.Screen name="Teste" component={TesteScreen} />
             </Stack.Navigator>
         </NavigationContainer>
         </SafeAreaProvider>
