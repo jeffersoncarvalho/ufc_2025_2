@@ -1,50 +1,34 @@
-import { SafeAreaView } from "react-native-safe-area-context";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { SafeAreaProvider } from "react-native-safe-area-context"
+import { NavigationContainer } from "@react-navigation/native"
+import { createStackNavigator } from "@react-navigation/stack"
 
-import PokedexMain from "./components/aula_05/PokedexMain";
-import PokedexCapturados from "./components/aula_05/PokedexCapturados";
+import HomeScreen from "./components/aula_06/HomeScreen"
+import PerfilScreen from "./components/aula_06/PerfilScreen"
+import ProjetosScreen from "./components/aula_06/ProjetosScreen"
+import ContatosScreen from "./components/aula_06/ContatosScreen"
 
-import { PokemonProvedor } from "./components/aula_05/PokemonProvedor";
+const Stack = createStackNavigator()
 
-const Tab = createBottomTabNavigator()
+const App = () => {
 
-export default function App() {
-  return (
-    
-      <PokemonProvedor>
+    return (
+        <SafeAreaProvider>
         <NavigationContainer>
-          <Tab.Navigator
-            initialRouteName="Pokédex"
-          >
-            <Tab.Screen name="Pokédex" component={PokedexMain}/>
-            <Tab.Screen name="Pokebola" component={PokedexCapturados}/>
-          </Tab.Navigator>
+            <Stack.Navigator
+                screenOptions={
+                    {headerShown:false}
+                }
+            >
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Perfil" component={PerfilScreen} />
+                <Stack.Screen name="Projetos" component={ProjetosScreen} />
+                <Stack.Screen name="Contatos" component={ContatosScreen} />
+                
+            </Stack.Navigator>
         </NavigationContainer>
-      </PokemonProvedor>
-
-  )
+        </SafeAreaProvider>
+        
+    )
 }
 
-/*export default function App() {
-  return (
-    <View style={styles.container}>
-      <OlaMundoSafeArea />
-      
-      <Text>Jefferson</Text>
-      <StatusBar style="auto" />
-      
-    </View>
-  );
-}
-*/
-
-/*const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-*/
+export default App
