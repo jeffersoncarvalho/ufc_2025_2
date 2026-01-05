@@ -1,0 +1,60 @@
+Assunto da Prova - 07/02
+
+20 Questões, ABCD
+
+HTML
+
+* Teoria sobre a internet e a WWW
+* Tags básicas do HTML
+* Organização da página
+* Comentários e boas práticas
+* Tags do <head> com meta informações sobre o site
+* HTML semântico (nav, header, main, article, section, footer, figure, etc.)
+* Tabelas semânticas
+* Elementos em Bloco, elemento Inline
+* Listas ordenadas, listas não ordenadas
+* Formulários
+
+CSS
+
+* abordagem de importação do CSS no html (arquivo externo, tag style e css inline)
+* seletores, classes, ids, seletor de atributo, relação entre classes e atributos (vizinho, irmão) 
+* pseudo-classes, pseudo-atributos
+* criação de variáveis
+* posicionamento (https://www.w3schools.com/css/css_positioning.asp)
+* Flexbox (criação de layout)
+* Responsividade (media queries)
+
+JavaScript
+
+Servidor
+
+* arquitetura (controladores, models, dtos, serviços, repositórios)
+
+Cliente
+
+* Promessas (Promises)
+* Fetch e método GET, request e o response
+* async/await e then/catch (try/catch)
+* funções seta (lambda, arrow function), functions, funções callback
+* JSON (string pra JSON e JSON pra string)
+* Session storage
+* Manipução do HTML (DOM)
+ - document
+ - document.getElementById
+ - document.createElement
+ - Dado um elemento HTML:
+	- classList.add
+	- innerHTML
+	- appendChild
+
+Sintaxe do JavaScript
+
+* Criação de variáveis (let e var)
+* loops e foreach
+* manipulação de listas
+
+
+
+
+

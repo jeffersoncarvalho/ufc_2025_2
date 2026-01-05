@@ -1,5 +1,5 @@
 async function carregarPokemons() {
-    const response = await fetch("http://172.25.250.154:3000/api/pokemons/listarTodos")
+    const response = await fetch("http://localhost:3000/api/pokemons/listarTodos")
     const pokemons = await response.json()
     const pokemonContainerDiv = document.getElementById("pokemon-container") 
     pokemons.forEach(
@@ -57,7 +57,7 @@ function capturarPokemon(pokemon){
 
 function carregarPokemonsCapturados() {
     let pokemons = sessionStorage.getItem("pokemons")
-    console.log(pokemons)
+    //console.log(pokemons)
     if(pokemons) {
         pokemons = JSON.parse(pokemons)
         const capturadosDiv = document.getElementById("capturados-container")
