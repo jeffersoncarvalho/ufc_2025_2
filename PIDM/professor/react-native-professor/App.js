@@ -1,74 +1,41 @@
-import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from '@expo/vector-icons'
+import { SafeAreaProvider } from "react-native-safe-area-context"
+import { NavigationContainer } from "@react-navigation/native"
+import { createStackNavigator } from "@react-navigation/stack"
 
-//import HelloWorld from './components/aula_01/01_HelloWorld';
-//import HelloWorld from './components/aula_01/02_HelloWorld';
-//import { HelloWorld } from "./components/aula_01/03_HelloWorld";
-//import { HelloWorld } from "./components/aula_01/04_HelloWorld/04_HelloWorld";
-//import { AppContainer } from "./components/aula_01/05_Props/05_AppContainer";
-//import PokedexButton from "./components/aula_02/PokedexButton";
-//import PokedexButtonPressable from "./components/aula_02/PokedexButtonPressable";
-//import PokedexCard from "./components/aula_02/PokedexCard";
-//import PokedexMain from "./components/aula_02/PokedexMain";
+import HomeScreen from "./components/aula_04/HomeScreen"
+import ProfileScreen from "./components/aula_04/ProfileScreen"
+import ContactScreen from "./components/aula_04/ContactScreen"
+import ProjectScreen from "./components/aula_04/ProjectScreen"
+import ModalScreen from "./components/aula_04/ModalScreen"
 
-import PokedexMain from "./components/aula_03/PokedexMain";
-import PokedexCaptured from "./components/aula_03/PokedexCaptured";
-
-import { PokemonProvider } from "./components/aula_03/PokemonProvider";
-
-const Tab = createBottomTabNavigator()
+const Stack = createStackNavigator()
 
 export default function App() {
-  return (
-    <PokemonProvider>
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Pokedex"
-        screenOptions={({ route }) => ({
-          tabBarShowIcon: true,
-          tabBarLabelStyle: { fontSize: 12 },
+    return(
+        <SafeAreaProvider>
+        <NavigationContainer>
+            <Stack.Navigator
+                screenOptions={{
+                    headerShown: false
+                }}
+            >
+                <Stack.Screen name="Home" component={HomeScreen}/>
+                <Stack.Screen name="Perfil" component={ProfileScreen}/>
+                <Stack.Screen name="Projetos" component={ProjectScreen}/>
+                <Stack.Screen name="Contatos" component={ContactScreen}/>
 
-          // Estilo da barra superior
-          tabBarStyle: {
-            backgroundColor: '#fff',
-          },
+                <Stack.Screen 
+                    name="Curiosidades" 
+                    component={ModalScreen}
+                    options={{
+                        presentation:"card",
+                        headerShown:false,
+                        animation:"slide_from_bottom"
+                    }}
+                    />
 
-          // Qual ícone cada tab usa: --------------------------------------
-          tabBarIcon: ({ focused }) => {
-            let iconName = '';
-
-            switch (route.name) {
-              case 'Pokedex':
-                iconName = focused ? 'home' : 'home-outline';
-                break;
-              case 'Pokebola':
-                iconName = focused ? 'call' : 'call-outline';
-                break;
-            }
-
-            return <Ionicons name={iconName} size={20} color={focused ? '#007AFF' : '#555'} />;
-          },
-
-          // Cor da linha indicadora de aba ativa
-          tabBarIndicatorStyle: { backgroundColor: '#007AFF' },
-        })}
-      >
-        <Tab.Screen name="Pokedex" component={PokedexMain} />
-        <Tab.Screen name="Pokebola" component={PokedexCaptured} />
-      </Tab.Navigator>
-    </NavigationContainer>
-    </PokemonProvider>
-  );
+            </Stack.Navigator>
+        </NavigationContainer>
+        </SafeAreaProvider>
+    )
 }
-
-const styles = StyleSheet.create({
-    safeAreaView: {
-        //backgroundColor:"#FFF",
-        backgroundColor: "beige",
-        flex: 1,
-    }
-})
-

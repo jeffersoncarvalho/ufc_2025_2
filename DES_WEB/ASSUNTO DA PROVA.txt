@@ -55,6 +55,11 @@ Sintaxe do JavaScript
 * manipulação de listas
 
 
+ATIVIDADE DA AULA:
+
+
+CRIAR 5 QUESTÕES ABCD. 
+
 
 
 

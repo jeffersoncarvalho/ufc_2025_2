@@ -1,49 +1,43 @@
-//import { SafeAreaView } from "react-native-safe-area-context"
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "@expo/vector-icons/Ionicons" 
-//import Ionicons from "react-native-vector-icons/Ionicons";
+import { SafeAreaProvider } from "react-native-safe-area-context"
+import { NavigationContainer } from "@react-navigation/native"
+import { createStackNavigator } from "@react-navigation/stack"
 
-import PokedexMain from "./components/aula_03/PokedexMain";
-import PokedexPokebola from "./components/aula_03/PokedexPokebola";
+//telas
+import MenuPrincipal from "./components/aula_04/MenuPrincipalScreen"
+import PerfilScreen from "./components/aula_04/PerfilScreen"
+import ProjetosScreen from "./components/aula_04/ProjetosScreen"
+import MeusContatosScreen from "./components/aula_04/MeusContatosScreen"
+import MeuModal from "./components/aula_04/MeuModal"
 
-const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator()
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Pokedex"
-        screenOptions={({ route }) => ({
-          tabBarShowIcon: true,
-          tabBarLabelStyle: { fontSize: 12 },
-
-          // Qual ícone cada tab usa:
-          tabBarIcon: ({ focused }) => {
-            let iconName = "";
-
-            switch (route.name) {
-              case "Pokedex":
-                iconName = focused ? "home" : "home-outline";
-                break;
-              case "Pokebola":
-                iconName = focused ? "ban" : "ban-outline";
-                break;
-            }
-
-            return (
-              <Ionicons
-                name={iconName}
-                size={20}
-                color={focused ? "#007AFF" : "#555"}
-              />
-            );
-          },
-        })}
-      >
-        <Tab.Screen name="Pokedex" component={PokedexMain} />
-        <Tab.Screen name="Pokebola" component={PokedexPokebola} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
+const App = () => {
+    return (
+        <SafeAreaProvider>
+            <NavigationContainer>
+                <Stack.Navigator
+                    screenOptions={
+                        {headerShown:false}
+                    }
+                >
+                    <Stack.Screen name="Home" component={MenuPrincipal} />
+                    <Stack.Screen name="Perfil" component={PerfilScreen} />
+                    <Stack.Screen name="Projetos" component={ProjetosScreen} />
+                    <Stack.Screen name="Contatos" component={MeusContatosScreen} />
+                    <Stack.Screen 
+                        name="MeuModal" 
+                        component={MeuModal}
+                        options={{
+                            presentation:"modal",
+                            animation:"fade_from_bottom"
+                        }} 
+                    />
+                    
+                </Stack.Navigator>
+            </NavigationContainer>
+            
+        </SafeAreaProvider>
+    )
 }
+
+export default App
