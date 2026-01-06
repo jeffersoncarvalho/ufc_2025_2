@@ -1,13 +1,14 @@
-TURMA 02
+TURMA 01
 
 ASSUNTO PARA A SEGUNDA PROVA
-DIA 14/01/2026
+DIA 13/01/2026
 20 QUESTÕES ABCD (0,5 por questão)
 SEM PESQUISA
 
 SERVIDOR(5 QUESTÕES)
-
-	- TEORIA DA ARQUITETURA
+	
+	TEORIA DA ARQUITETURA
+	
 	- MODELOS
 	- DTOS
 	- REPOSITÓRIOS
@@ -19,10 +20,11 @@ CLIENTE
 
 - JAVASCRIPT (5 QUESTÕES)
 
- * criação de variáveis
+ * criação de variáveis (let, var)
  * laços, if-else
  * funções callback, funções arrow
  * função .map, .foreach
+ * listas
  * uso do fetch
  * uso do async/await ou then/catch
  * promessas
@@ -30,17 +32,16 @@ CLIENTE
 
 - REACT NATIVE (10 QUESTÕES)
 
- * criação e execução de projetos (create-react-app)
+ * criação e execução de projetos (expo)
  * criação de componentes simples
  * uso de estilos, StyleSheet (interno e externos)
  * diferença entre o estilo "CSS" do React Native com o CSS Web
  * Importação de componentes
  * Reuso de componentes
- * props (desconstrução do objeto JSON em propriedades)
- * useState, useEffect
+ * props (desconstrução do objeto JSON em propriedades) 
+ * useState, useEffect, useContext
  * View, Text, Pressable, Button, Image, FlatList
- * Navegação (Tabs, Stack e Modais) (react-navigation)
- 
+ * Navegação (Tabs, Stack e Modals) (react-navigation)
  
  ATIVIDADE AULA:
  
